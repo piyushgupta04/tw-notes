@@ -1,0 +1,47 @@
+Tailwind CSS: min-height, max-height, min-width, aur max-width - Ek Quick Guide
+
+Yeh properties CSS mein kisi bhi HTML element ki height aur width ki kam se kam aur zyada se zyada limit set karne ke kaam aati hain. Tailwind CSS inke liye bahut saare ready-to-use classes deta hai.
+
+1. Height ke Liye:
+
+min-height (Kam se kam height):
+
+Yeh property define karti hai ki ek element ki minimum height kitni honi chahiye. Agar element ka content isse kam height leta hai toh bhi element utni hi height ka rahega. Agar content zyada hai toh element ki height badh sakti hai.
+Tailwind Classes Examples:
+min-h-0: Minimum height 0.
+min-h-full: Minimum height parent container ki height ke barabar.
+min-h-screen: Minimum height viewport (browser window) ki height ke barabar.
+min-h-[200px]: Minimum height 200 pixels.
+min-h-48 (Tailwind predefined value): Minimum height 12rem (approx. 48px).
+max-height (Zyada se zyada height):
+
+Yeh property define karti hai ki ek element ki maximum height kitni ho sakti hai. Agar element ka content is limit se kam hai toh element utni hi height ka rahega. Agar content is limit se zyada ho jaye toh element ki height isse zyada nahi badhegi (content overflow ho sakta hai).
+Tailwind Classes Examples:
+max-h-full: Maximum height parent container ki height ke barabar.
+max-h-screen: Maximum height viewport ki height ke barabar.
+max-h-[300px]: Maximum height 300 pixels.
+max-h-32 (Tailwind predefined value): Maximum height 8rem (approx. 32px).
+2. Width ke Liye:
+
+min-width (Kam se kam width):
+
+Yeh property define karti hai ki ek element ki minimum width kitni honi chahiye. Agar element ka content isse kam width leta hai toh bhi element utni hi width ka rahega. Agar content zyada hai toh element ki width badh sakti hai.
+Tailwind Classes Examples:
+min-w-0: Minimum width 0.
+min-w-full: Minimum width parent container ki width ke barabar.
+min-w-[150px]: Minimum width 150 pixels.
+min-w-24 (Tailwind predefined value): Minimum width 6rem (approx. 24px).
+max-width (Zyada se zyada width):
+
+Yeh property define karti hai ki ek element ki maximum width kitni ho sakti hai. Agar element ka content is limit se kam hai toh element utni hi width ka rahega. Agar content is limit se zyada ho jaye toh element ki width isse zyada nahi badhegi (content wrap ho sakta hai agar allowed ho). Yeh responsive layouts banane mein bahut helpful hai.
+Tailwind Classes Examples:
+max-w-none: Koi maximum width nahi.
+max-w-full: Maximum width parent container ki width ke barabar.
+max-w-xs, max-w-sm, max-w-md, max-w-lg, max-w-xl (Tailwind predefined responsive widths).
+max-w-[500px]: Maximum width 500 pixels.
+Main Points Yaad Rakhne Wale:
+
+min- hamesha kam se kam size define karta hai. Element isse chhota nahi hoga.
+max- hamesha zyada se zyada size define karta hai. Element isse bada nahi hoga.
+Percentage (%) mein height aur width parent container ke size ke relative hote hain.
+Viewport units (vh for height, vw for width) browser window ke size ke relative hote hain.
