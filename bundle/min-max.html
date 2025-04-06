@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to HTML</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="markdown-body font-1">
+        <p>Haan bhai, koi dikkat nahi! <code>min-max</code> width ko achche se samajhte hain, ekdum simple tarike se revision ho jayega.</p>
+        <p>Dekho, <code>min-width</code> aur <code>max-width</code> CSS ki properties hain. Tailwind CSS mein inke liye utility classes bani hui hain jinko use karna bahut aasan hai.</p>
+        <h2><code>min-width</code> (Kam se kam width):</h2>
+        <p><code>min-width</code> ka matlab hai ki koi bhi element (jaise tumhari image) is width se <em>kam</em> nahi ho sakti. Agar content kam bhi ho ya screen choti bhi ho jaye, woh element apni minimum width maintain karega.</p>
+        <p>Tailwind mein <code>min-width</code> ke liye classes kuch is tarah se hoti hain:</p>
+        <ul>
+            <li><code>min-w-0</code>: Minimum width zero.</li>
+            <li><code>min-w-full</code>: Minimum width 100% of its parent container.</li>
+            <li><code>min-w-min</code>: Minimum width jitna content ko chahiye.</li>
+            <li><code>min-w-max</code>: Minimum width jitni parent container ki width ho sakti hai.</li>
+            <li><code>min-w-[value]</code>: Tum custom value bhi pixels (<code>px</code>), rem, etc. mein de sakte ho, jaise <code>min-w[200px]</code> ya <code>min-w-[10rem]</code>.</li>
+        </ul>
+        <p>Aur breakpoints ke saath:</p>
+        <ul>
+            <li><code>sm:min-w-32</code>: Small screens aur usse bade par minimum width <code>128px</code>.</li>
+            <li><code>md:min-w-48</code>: Medium screens aur usse bade par minimum width <code>192px</code>.</li>
+        </ul>
+        <p><strong>Example:</strong></p>
+        <p>Agar tumne kisi <code>div</code> par <code>min-w-40</code> class lagayi hai, toh us <code>div</code> ki width kabhi bhi <code>160px</code> se kam nahi hogi. Agar uske andar ka content kam hai toh bhi woh <code>160px</code> ka hi dikhega.</p>
+        <h2><code>max-width</code> (Zyada se zyada width):</h2>
+        <p><code>max-width</code> ka matlab hai ki koi bhi element is width se <em>zyada</em> nahi ho sakti. Agar content zyada bhi ho ya screen badi bhi ho jaye, woh element apni maximum width se zyada nahi badhega.</p>
+        <p>Tailwind mein <code>max-width</code> ke liye classes kuch is tarah se hoti hain:</p>
+        <ul>
+            <li><code>max-w-0</code>: Maximum width zero.</li>
+            <li><code>max-w-none</code>: Koi maximum width nahi.</li>
+            <li><code>max-w-xs</code>, <code>max-w-sm</code>, <code>max-w-md</code>, <code>max-w-lg</code>, <code>max-w-xl</code>, <code>max-w-2xl</code> ... <code>max-w-7xl</code>: Yeh predefined maximum widths hain Tailwind ki theme mein.</li>
+            <li><code>max-w-full</code>: Maximum width 100% of its parent container.</li>
+            <li><code>max-w-min</code>: Maximum width jitna content ko chahiye.</li>
+            <li><code>max-w-max</code>: Maximum width jitni parent container ki width ho sakti hai.</li>
+            <li><code>max-w-prose</code>: Readable width for prose content.</li>
+            <li><code>max-w-[value]</code>: Tum custom value bhi pixels (<code>px</code>), rem, etc. mein de sakte ho, jaise <code>max-w[500px]</code> ya <code>max-w-[20rem]</code>.</li>
+        </ul>
+        <p>Aur breakpoints ke saath:</p>
+        <ul>
+            <li><code>sm:max-w-64</code>: Small screens aur usse bade par maximum width <code>256px</code>.</li>
+            <li><code>md:max-w-screen-md</code>: Medium screens aur usse bade par maximum width medium screen breakpoint (<code>768px</code> by default).</li>
+        </ul>
+        <p><strong>Example:</strong></p>
+        <p>Agar tumne kisi <code>div</code> par <code>max-w-xl</code> class lagayi hai, toh us <code>div</code> ki width kabhi bhi Tailwind ki <code>xl</code> breakpoint ki maximum width se zyada nahi hogi (jo ki default theme mein <code>1280px</code> hai). Agar screen badi bhi ho toh woh <code>div</code> center mein rahega aur uski width <code>1280px</code> se zyada nahi hogi.</p>
+        <h2><code>min-width</code> aur <code>max-width</code> ka saath mein use:</h2>
+        <p>Jab tum <code>min-width</code> aur <code>max-width</code> ko ek saath use karte ho, toh tum basically ek range define karte ho ki ek element ki width kitni ho sakti hai. Woh element hamesha tumhari di hui minimum width se bada ya uske barabar rahega aur maximum width se chota ya uske barabar rahega.</p>
+        <h2>Tumhare code ke context mein:</h2>
+        <p>Pehle tumne use kiya tha:</p>
+        <pre><code>&lt;img src=&quot;icons/800-800 example temp.png&quot; class=&quot;min-w-[260px] lg:max-w-[30px]&quot; alt=&quot;&quot;&gt;
+</code></pre>
+        <p>Iska matlab tha ki image ki minimum width <code>260px</code> hogi, lekin large screens par uski maximum width sirf <code>30px</code> hogi. Yeh shayad tumhara intended result nahi tha kyunki large screen par image bahut choti dikhegi.</p>
+        <h2>Sahi tarika:</h2>
+        <p>Agar tum chah rahe ho ki image chote screens par kam se kam <code>260px</code> wide rahe aur bade screens par ek certain limit tak hi badhe, toh tum kuch aisa use kar sakte ho:</p>
+        <pre><code>&lt;img src=&quot;icons/800-800 example temp.png&quot;class=&quot;min-w-[260px] lg:max-w-md&quot; alt=&quot;&quot;&gt;
+</code></pre>
+        <p>Yahan par:</p>
+        <ul>
+            <li><code>min-w-[260px]</code>: Image ki minimum width hamesha <code>260px</code> rahegi.</li>
+            <li><code>lg:max-w-md</code>: Large screens aur usse bade par image ki maximum width Tailwind ki <code>md</code> breakpoint ki maximum width (<code>768px</code> by default) hogi. Isse image bahut bada nahi dikhega bade screens par.</li>
+        </ul>
+        <p>Ya agar tum fixed widths use karna chah rahe ho with limits:</p>
+        <pre><code>&lt;img src=&quot;icons/800-800 example temp.png&quot;class=&quot;w-full sm:w-64 md:max-w-md&quot; alt=&quot;&quot;&gt;
+</code></pre>
+        <p>Yahan par:</p>
+        <ul>
+            <li><code>w-full</code>: Chote screens par image parent container ki full width legi.</li>
+            <li><code>sm:w-64</code>: Small screens aur usse bade par image ki width <code>256px</code> ho jayegi.</li>
+            <li><code>md:max-w-md</code>: Medium screens aur usse bade par image ki maximum width <code>768px</code> hogi. Agar parent container <code>768px</code> se chota hai toh image uske according adjust hogi, lekin agar bada hai toh image <code>256px</code> se <code>768px</code> ke beech mein rahegi.</li>
+        </ul>
+        <h2>Revision Points:</h2>
+        <ul>
+            <li><code>min-width</code> element ki kam se kam width define karta hai.</li>
+            <li><code>max-width</code> element ki zyada se zyada width define karta hai.</li>
+            <li>Inko saath mein use karke tum element ki width ki ek range set kar sakte ho.</li>
+            <li>Breakpoint prefixes (<code>sm:</code>, <code>md:</code>, <code>lg:</code>, etc.) use karke tum different screen sizes ke liye different <code>min-width</code> aur <code>max-width</code> values set kar sakte ho.</li>
+        </ul>
+        <p>Ab batao, kya yeh revision tumhare liye helpful raha? Kya ab <code>min-max</code> width ka concept aur clear hua? Agar koi aur doubt hai toh puch sakte ho!</p>
+    </div>
+</body>
+</html>

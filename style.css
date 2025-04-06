@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Delius&family=Delius+Swash+Caps&family=Noto+Color+Emoji&family=Roboto+Slab:wght@100..900&display=swap');
+
+.font-1 {
+    font-family: "Delius", cursive;
+}
+
+.font-2 {
+    font-family: "Delius Swash Caps", cursive;
+
+}
+
+.font-3 {
+    font-family: "Roboto Slab", serif;
+}
+
+.font-4 {
+    font-family: "Noto Color Emoji", sans-serif;
+}
+
+.font-5 {
+    font-family: "Arvo", serif;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+.markdown-body h1 { font-size: 2.5em; }
+.markdown-body h2 { font-size: 1.3em; }
+.markdown-body h3 { font-size: 1.75em; }
+.markdown-body h4 { font-size: 1.5em; }
+.markdown-body h5 { font-size: 1.25em; }
+.markdown-body h6 { font-size: 1em; }
+.markdown-body p {
+    margin-bottom: 1em;
+}
+.markdown-body strong {
+    font-weight: bold;
+}
+.markdown-body em {
+    font-style: italic;
+}
+.markdown-body ul, .markdown-body ol {
+    margin-bottom: 1em;
+    padding-left: 2em;
+}
+.markdown-body li {
+    margin-bottom: 0.5em;
+}
+.markdown-body blockquote {
+    border-left: 0.25em solid #ddd;
+    padding-left: 1em;
+    color: #777;
+    margin-bottom: 1em;
+}
+.markdown-body code {
+    font-family: monospace, monospace;
+    font-size: 0.85em;
+    background-color: #f4f4f4;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+.markdown-body pre code {
+    display: block;
+    padding: 0.8em;
+    line-height: 1.4;
+}
+.markdown-body hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1.5em 0;
+}
+.markdown-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+.markdown-body th, .markdown-body td {
+    border: 1px solid #ddd;
+    padding: 0.6em 0.8em;
+    text-align: left;
+}
+.markdown-body th {
+    font-weight: bold;
+}
+
+body a{
+    text-decoration: none;
+    color: rgb(83, 10, 10);
+}
+body a:hover{
+    color: brown;
+}
