@@ -1,28 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Delius&family=Delius+Swash+Caps&family=Noto+Color+Emoji&family=Roboto+Slab:wght@100..900&display=swap');
-
-.font-1 {
-    font-family: "Delius", cursive;
-}
-
-.font-2 {
-    font-family: "Delius Swash Caps", cursive;
-
-}
-
-.font-3 {
-    font-family: "Roboto Slab", serif;
-}
-
-.font-4 {
-    font-family: "Noto Color Emoji", sans-serif;
-}
-
-.font-5 {
-    font-family: "Arvo", serif;
-}
-
 body {
-    font-family: sans-serif;
+    font-family: "Roboto Slab", serif;
     line-height: 1.6;
     margin: 20px;
 }
@@ -91,11 +69,3 @@ body {
     font-weight: bold;
 }
 
-body a{
-    text-decoration: none;
-    color: rgb(83, 10, 10);
-}
-
-body a:hover{
-    color: brown;
-}
